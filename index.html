@@ -1,29 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>🐈🐈‍⬛index</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <a href="index.html">🏠〰️💞</a><br/>
+    <a href="index.html">🏠〰️💞</a><br/><br/>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+        font-family: 'DungGeunMo';
+        src: url('./fonts/DungGeunMo.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
         body {
-            background-image: url('https://i.pinimg.com/736x/23/10/8b/23108b4dbecdb3dbce78de778b701828.jpg'); /* 이미지 경로를 입력하세요 */
+            background-image: url('https://i.pinimg.com/736x/f5/87/45/f587452522991cdb0bf0172c338769ba.jpg'); /* 이미지 경로를 입력하세요 */
             background-size: cover; /* 화면을 꽉 채우도록 설정 */
             background-repeat: no-repeat; /* 이미지 반복 방지 */
             background-position: center; /* 이미지를 중앙에 배치 */
+            font-family:'DungGeunMo', sans-serif;
         }
+        /* 상단메뉴바 */
+        .navbar {
+            background: rgba(255, 255, 255, 0.3);       /* 투명한 하얀색 */
+            backdrop-filter: blur(20px);               /* 유리처럼 흐림 */
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 30px;                        /* 동글동글한 느낌 */
+            padding: 20px 40px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* 부드러운 그림자 */
+            color: #5c5c8a;                             /* 연한 퍼플계열 */
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .day-section{
+            padding:30px;
+        }
+
+        
+        .day-title {
+            background: rgba(255, 240, 255, 0.4); /* 연한 보라 핑크 계열 */
+            backdrop-filter: blur(10px);          /* 흐릿한 느낌 */
+            -webkit-backdrop-filter: blur(10px);
+            padding: 12px 28px;
+            border-radius: 25px;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #7b5ea0;                      /* 부드러운 보라색 */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 16px;
+            transition: 0.3s ease;
+        }
+        
+        .day-title:hover {
+        background: rgba(240, 200, 255, 0.6); /* 마우스 올리면 은은하게 */
+        color: #fff;
+        }
+
+        .examples {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        }
+
+        .examples a {
+        background-color: #bfe2a8;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background 0.3s;
+        }
+
+        .examples a:hover {
+        background-color: #e4e9ce;
+        }
+
+        .example-frame {
+        display: inline-block;
+        margin: 10px;
+        }
+
+        .cloud-link {
+        text-decoration: none;
+        }
+
+        .cloud-cover {
+        width: 180px;
+        height: 130px;
+        border-radius: 50% 50% 60% 40% / 60% 60% 40% 40%; /* 구름 느낌 */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px); /* 흐릿한 느낌 */
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        }
+
+        .cloud-cover::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.4); /* 반투명 흰 커버 */
+        z-index: 1;
+        }
+
+        .cloud-text {
+        position: relative;
+        z-index: 2;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #6e5daf;
+        text-align: center;
+        line-height: 130px;
+        }
+
+        .cloud-cover:hover {
+        transform: scale(1.05);
+        }
+
     </style>
 </head>
 <body>
-    <h1>HTML 실습</h1>
-    <h2>1일차</h2>
-    <a href="ex01-01.html">예제1</a><br />
-    <a href="ex01-02.html">예제2</a><br />
-    <a href="ex01-03.html">예제3</a><br />
-    <a href="ex01-04.html">예제4</a><br />
-    <a href="ex01-05.html">예제5</a><br />
-    <a href="ex01-06.html">예제6</a><br />
-    <a href="ex01-07.html">예제7</a><br />
-    <a href="ex01-08.html">예제8</a><br />
-    <a href="ex01-09.html">예제9</a><br />
+    <div class="navbar">
+        <h1>HTML 실습</h1>
+    </div><br/>
+
+    <div class="daty-section">
+        <div class="day-title">1일차</h2></div>
+        <div class="examples">
+            <a href="ex01-01.html">예제1</a>
+            <a href="ex01-02.html">예제2</a>
+            <a href="ex01-03.html">예제3</a>
+            <a href="ex01-04.html">예제4</a>
+            <a href="ex01-05.html">예제5</a>
+            <a href="ex01-06.html">예제6</a>
+            <a href="ex01-07.html">예제7</a>
+            <a href="ex01-08.html">예제8</a>
+            <a href="ex01-09.html">예제9</a>
+        </div>
+    </div><br/>
+    <div class="daty-section">
+        <div class="day-title">2일차</h2></div>
+        <div class="examples">
+            <a href="ex02-01.html">예제1</a>
+            <a href="ex02-02.html">예제2</a>
+            <a href="ex02-03.html">예제3</a>
+            <a href="ex02-04.html">예제4</a>
+            <a href="ex02-05.html">예제5</a>
+            <a href="ex02-06.html">예제6</a>
+            <a href="ex02-07.html">예제7</a>
+            <a href="ex02-08.html">예제8</a>
+            <a href="ex02-09.html">예제9</a>
+        </div>
+    </div><br/>
+    <div class="daty-section">
+        <div class="day-title">3일차</h2></div>
+        <div class="examples">
+            <a href="ex03-01.html">예제1</a>
+            <a href="ex03-02.html">예제2</a>
+            <a href="ex03-03.html">예제3</a>
+            <a href="ex03-04.html">예제4</a>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="example-frame">
+        <a href="hw4이력서.html" class="cloud-link">
+          <div class="cloud-cover" style="background-image: url('https://i.pinimg.com/736x/a9/d8/f6/a9d8f6cc6722b05a45926252d7282ed1.jpg');">
+            <div class="cloud-text">안경만두의 이력서👓</div>
+          </div>
+        </a>
+      </div>
+
+</body>
 </body>
 </html>

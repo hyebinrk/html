@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>학습 인덱스</title>
+
+  <!-- 구글 폰트 Pretendard 불러오기 -->
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
+
+  <style>
+    /* 기본 스타일 설정 (여백 제거 + 폰트 지정 등) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    /* 배경 이미지를 전체 화면에 적용 */
+    body {
+      background: url('images/background.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    /* 상단 메뉴바 스타일 */
+    nav {
+      background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정 배경 */
+      padding: 20px;
+      display: flex;
+      justify-content: space-between; /* 좌우 정렬 */
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+    }
+
+    /* 메뉴 항목 스타일 */
+    .menu {
+      display: flex;
+      gap: 20px; /* 메뉴 사이 간격 */
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #00a8ff; /* 마우스 올렸을 때 색상 변경 */
+    }
+
+    /* 본문 컨텐츠 스타일 */
+    .content {
+      padding: 60px;
+    }
+
+    /* 각 일차 섹션 스타일 */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    /* 파일 리스트 스타일 */
+    ul {
+      list-style: none; /* 기본 점 제거 */
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li a {
+      background: rgba(255, 255, 255, 0.2); /* 반투명 배경 */
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    ul li a:hover {
+      background: rgba(0, 168, 255, 0.5); /* hover 효과 */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 메뉴 -->
+  <nav>
+    <h1>📘 학습 인덱스</h1>
+
+    <!-- 메뉴 항목 (일차별 링크) -->
+    <div class="menu">
+      <a href="#day1">1일차</a>
+      <a href="#day2">2일차</a>
+      <!-- 필요한 만큼 추가 가능 -->
+    </div>
+  </nav>
+
+  <!-- 본문 컨텐츠 -->
+  <div class="content">
+
+    <!-- 1일차 섹션 -->
+    <div class="section" id="day1">
+      <h2>1일차</h2>
+      <ul>
+        <li><a href="day1/page1.html">1일차 - 파일 1</a></li>
+        <li><a href="day1/page2.html">1일차 - 파일 2</a></li>
+        <!-- 파일 더 추가 가능 -->
+      </ul>
+    </div>
+
+    <!-- 2일차 섹션 -->
+    <div class="section" id="day2">
+      <h2>2일차</h2>
+      <ul>
+        <li><a href="day2/page1.html">2일차 - 파일 1</a></li>
+        <li><a href="day2/page2.html">2일차 - 파일 2</a></li>
+        <!-- 계속 확장 가능 -->
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

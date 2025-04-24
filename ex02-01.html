@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        body {
+            background-color: beige;
+            font-family:'seoyoon', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">🏠〰️💞</a><br/>
+    <fieldset>
+        <legend>제출양식</legend>
+        <form action="ex02-01a0.html">
+            <label for="input-id">아이디:</label>
+            <input 
+                type="text" 
+                name="" 
+                class="javaclass-ban gym"
+                id="input-id"
+                placehoder="아이디를 입력하세요"
+                value="bigdata"
+            /><br />
+            <label for="input-pw">비밀번호</label>
+            <input 
+                type="password" 
+                class="javaclass-ban football"
+                id="input-pw" 
+                placeholder="비번을 입력하세요"
+                required
+            /><br />
+            
+            <label for="jumin">생년월일:</label>
+            <input type="text" id="jumin" /><br />
+
+            <label for="input-date">날짜:</label>
+            <input type="date" id="input-date" value="2026-01-03" /><br />
+            <label for="input-time">시간"</label>
+            <input type="time" name="" id="input-time" value="13:13" /><br />
+            <label for="input-birth">출생일:</label>
+            <input type="datetime-local" name="" id="input-birth" />
+            <label for="upload">업로드:</label>
+            <input type="file" id="upload" /><br />
+            <input type="email" /><br />
+            <input type="color" /><br />
+            수량1 <input type="number" min="6" max="12"><br />
+            수량2 <input type="number" min="0" max="20" value="0" step="5">
+            <br />            
+            Range1 : <input type="range" min="6" max="12" /><br />
+            Range2 :
+            <input type="range" min="0" max="20" value="0" step="5" /><br />
+
+            (숨김):<input type="hidden" name="외모" value="귀여움" />
+            <hr />
+            <input type="submit" value="전송" />
+            <input type="reset" value="삭제" />
+        </form>
+    </fieldset>    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table {
+        border-collapse: collapse;
+    }
+    th,
+    td {
+        border: 3px solid rgba(253, 151, 34, 0.8);
+        padding: 10px 20px;
+        text-align: center;
+    }
+    @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        body {
+            background-color:beige;
+            font-family:'seoyoon', sans-serif;
+        }
+    </style>    
+</head>
+<body>
+    <a href="index.html">🏠〰️💞</a><br/>
+    <h2>상품 구성</h2>
+    <caption>선물용과 가정용 상품 구성</caption>
+    <!-- <colgroup>
+        <col style="background-color:burlywood">
+        <col>
+        <col style="width:30%; background-color: rgb(221,225,244)"> --수치를 정확하게 넣어주는것과 다르게 %로 넣으면 화면의 크기에 비례하여 만들어준다.
+    </colgroup> -->
+    <table>
+        <tr>
+        <thead style="background-color: rgb(251, 255, 191);">
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+        </tr>
+        </thead>
+        <tr>
+        <tbody style="background-color: lemonchiffon;">
+            <td rowspan="2">🎁선물용🎁</td>
+            <td>3kg</td>
+            <td>11~16과</td>
+            <td>35,000원</td>
+        </tr>
+        <tr>
+            <td>5kg</td>
+            <td>18~26과</td>
+            <td>52,000원</td>
+        </tr>
+        <tr>
+            <td rowspan="2">🏠가정용🏠</td>
+            <td>3kg</td>
+            <td>11~16과</td>
+            <td>30,000원</td>
+        </tr>
+        <tr>
+            <td>5kg</td>
+            <td>18~26과</td>
+            <td>47,000원</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>

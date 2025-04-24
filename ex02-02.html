@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        body {
+            background-color: beige;
+            font-family:'seoyoon', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">🏠〰️💞</a><br/>
+    <fieldset>
+        <legend>패턴테스트</legend>
+        <!-- form>(input+br)*3+div -->
+        <form action="">
+            ID: <input type="text" pattern="[a-zA-Z]{3}" required><br> <!--required:필수항목에 넣어줌. 관례적으로 가장마지막에 씀-->
+            PW: <input type="text" required><br>
+            <input type="text" value="당신은 멋집니다✨❣️❣️">
+            <input type="submit"><br>
+            <div><em>패턴에 맞출것</em></div>
+        </form>
+    </fieldset>        
+
+</body>
+</html>
