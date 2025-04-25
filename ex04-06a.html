@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식선택자</title>
+    <style>
+        p {
+            color: coral;
+        }
+        @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        body {
+            font-family:'seoyoon', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- div+p{7월의 여행지}+ul>(li>p{$주차 여행지})*2 -->
+    <div></div>
+    <p>7월의 여행지</p>
+    <ul>
+        <li>
+            <p>1주차 여행지</p>
+        </li>
+        <li>
+            <p>2주차 여행지</p>
+        </li>
+    </ul>
+    
+    </body>
+</html>

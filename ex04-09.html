@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자</title>
+    <style>
+        @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        body {
+            font-family:'seoyoon', sans-serif;
+        }
+        a{
+            color:darkolivegreen;
+        }
+        a:visited{
+            color:darkslateblue
+        }
+        a:active {
+            color:rgb(124, 19, 19);
+        }
+        /* 버튼과 인풋이 비활성화 되었을 때, 단 a링크는 동작 안 함 */
+        button:disabled,
+        input:disabled{
+            background-color: #ccc
+        }
+        /* 커서가 있는 동안 */
+        input:focus{
+            background-color:rgb(243, 204, 233)
+        }
+        /*선택되어 누르는 동안*/
+        input:active{
+            background-color:rgb(236, 247, 189)
+        }
+        .red-focus:focus{
+            background-color: darkred;            
+        }
+        .blue-focus:focus{
+            background-color: darkblue;
+        }
+        div{
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            background: rgb(42, 97, 54);
+            display: inline-block;
+        }
+        div:hover{
+            width: 40px;
+            background-color: rgb(167, 238, 171);}
+        input[type]:checked + label{
+            color:cadetblue;
+            text-decoration:line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1>가상선택자 응용</h1>
+    <a href="http://naver.com" disabled>네이버링크🍀</a>
+    <input type="text"/><button disabled>전송</button>
+    <hr/>
+    <input type="text" class="red-focus" value="클릭하면 빨갛게 변함">
+    <input type="text" class="blue-focus" value="클릭하면 파랗게 변함">
+    <hr/>
+    <input type="checkbox" id="eat"/>
+    <label for="eat">간식</label>
+    <input type="checkbox" id="meal"/>
+    <label for="meal">식사</label>
+    <hr />
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

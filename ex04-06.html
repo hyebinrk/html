@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합선택자</title>
+    <style>
+        /*div의 자손들 p에 적용*/
+        /* div p {color: blue} */
+        /* div의 바로 아래 p에만 적용 */
+        div p {
+            background-color: violet;
+        }
+        
+        div + p{
+            background-color: cornflowerblue
+        }
+        div > p{
+            color:blueviolet
+        }
+        @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        body {
+            font-family:'seoyoon', sans-serif;
+        }
+    </style>        
+</head>
+<body>
+    <h1>복합선택자</h1>
+    <h2>Heading</h2>
+    <div>
+        안녕하세요
+        <p>child1</p>
+        <p>child2</p>
+        <span>반가워요
+            <p>grandchild</p>
+        </span>
+    </div>    
+        <p>neighborhood child</p>
+</body>
+</html>
