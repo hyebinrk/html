@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --img1 :200px;
+            --img1h :100px;
+        }
+        body{
+            border: 1px solid #000;
+        }
+        div{
+            /* 방법1 */
+            text-align: center;
+        }
+        img{
+            /* 방법2 */
+            /* display : block;
+            margin: 0 auto; */
+           
+            /* 방법3 */
+            /* position: relative; */
+            /* left: calc(50% - var(--img1h)) */
+            width: var(--img1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img        
+        src="https://i.pinimg.com/736x/48/67/c6/4867c6e76f954ac25450ee65dd5536bf.jpg"
+        alt="">
+    </div>
+</body>
+</html>
+
+<!-- src="https://i.pinimg.com/236x/da/88/2c/da882ceb4089d7272dbcdc3107816aed.jpg" -->
