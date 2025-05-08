@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(252, 213, 234);
+            padding-top: 8rem;
+            display: flex;
+            justify-content: center;
+        }
+        .card{
+            background-color: white;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;    
+            overflow: hidden;        
+        }
+        .banner{
+            background-image: url(https://i.pinimg.com/736x/6b/60/ca/6b60ca5af9b39352810115c88c5dadf9.jpg);
+            display: flex;
+            justify-content: center;
+        }
+        .profile{
+            width: 100px;
+            height: 100px;
+            background-image: url(https://i.pinimg.com/736x/0d/2a/43/0d2a43289fcc983251174dd46c9d540d.jpg);
+            background-size: 100px;
+            border-radius: 50%;
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+            /* transform: translate(50%); */
+            position: relative;
+            transition: transform 0.2s ease-in;
+            top: 30px;
+        }
+        .profile:hover{
+            transform: scale(1.3);
+        }
+        .name{
+            text-align: center;
+            padding-top: 60px;
+        }
+        .follow-btn {
+            padding: 0.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .follow-btn button{
+            font-size: medium;
+            font-weight: bold;
+            background-color: rgb(155, 123, 150);
+            border: none;
+            padding: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+        .desc{
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.card>div.banner>div.profile^h2.name{Riku}+div.follow-btn>button{Follow}+div.desc{내용들...} -->
+    <div class="card">
+        <div class="banner">
+            <div class="profile"></div>
+        </div>
+        <h2 class="name">Riku</h2>
+        <div class="follow-btn">
+            <button>Follow</button>
+            <div class="desc">요거트아이스크림에샤인머스캣을추가하고벌꿀집도추가합니다.초코쉘도넣으면맛있습니다.</div>
+        </div>
+    </div>
+</body>
+</html>
