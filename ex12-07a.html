@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        tr,td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .temperature :nth-child(-n+6){
+            background-color: rgb(182, 125, 235);
+        }
+        .temperature :nth-child(n+7):nth-child(-n+10){
+            background-color: rgb(114, 114, 243);
+        }
+        .temperature :nth-child(n+11):nth-child(-n+14){
+            background-color: rgb(243, 243, 154);
+        }
+        .temperature :nth-child(n+15):nth-child(-n+17){
+            background-color: rgb(250, 250, 214);
+        }
+        .temperature :nth-child(n+18):nth-child(-n+23){
+            background-color: rgb(241, 126, 126);
+        }
+        script{
+            color: blueviolet;
+        }
+    </style>
+    
+</body>
+<!-- table>(tr>td*23)*3 -->
+<table>
+    <tr>
+        <td colspan="6">16미만</td>
+        <td colspan="4">16이상~22미만</td>
+        <td colspan="4">22이상~28미만</td>
+        <td colspan="3">28이상~32미만</td>
+        <td colspan="6">32이상</td>
+    </tr>
+    <tr class="temperature">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="6"></td>
+        <td colspan="4"></td>
+        <td colspan="4"></td>
+        <td colspan="3"></td>
+        <td colspan="6">정상온도를 넘겼습니다.</td>
+    </tr>
+</table>
+<script>
+        // const inp = prompt("현재 온도를 입력하세요.")
+        const inp = 25
+        if(inp < 16){
+            document.write('지금 온도는 '+inp+' 이며, 정상온도 이하로 벗어났습니다.')        
+        }
+        else if(16 <= inp && inp < 22){
+            document.write('지금 온도는 '+inp+' 이며, 선선합니다.')
+        }
+        else if(22 <= inp && inp < 28){
+            document.write('지금 온도는 '+inp+' 이며, 보통입니다.')
+        }
+        else if(28 <= inp && inp < 32){
+            document.write('지금 온도는 '+inp+' 이며, 조금 갑갑한 상태입니다.')
+        }
+        else{
+            document.write('지금 온도는 '+inp+' 이며, 정상 온도를 넘겼습니다.')
+        }
+</script>
+</html>

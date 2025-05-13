@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            border-collapse: collapse;
+            display: flex;
+            justify-content: center;
+        }
+        tr, td{
+            border: 3px solid rgb(246, 248, 236);
+            color:rgb(238, 113, 63);
+            padding: 10px;
+            text-align: center;
+        }
+        tr:first-child {
+            background-color: rgb(253, 187, 100);
+            color:white;
+        }
+        tr:nth-child(2){
+             background-color: rgb(252, 246, 167);
+        }
+        tr:nth-child(3){
+             background-color: rgb(243, 234, 115);
+        }
+        tr:nth-child(4){
+             background-color: rgb(252, 246, 167);
+        }
+        tr:last-child {
+            background-color: rgb(243, 234, 115);
+        }
+        td:last-child {
+            box-shadow: 0px 5px 5px 5px rgb(230, 98, 98);
+        }
+    </style>
+    <script>
+        document.write("<li style='margin: 0 2.5rem'>Hello 반갑다는 뜻이야!</li>")
+        document.write("<li style='margin: 0 2.5rem'>Javascript로 작성되었어.</li>")
+        document.write("<h1>&& and</h1>")
+        const list1 = `<body>
+    <table>
+        <tr>
+            <td>좌변</td>
+            <td>우변</td>
+            <td>결과</td>
+        </tr>
+        <tr>
+            <td>${false}</td>
+            <td>${false}</td>
+            <td>${false&&false}</td>
+        </tr>
+        <tr>
+            <td>${true}</td>
+            <td>${false}</td>
+            <td>${true&&false}</td>
+        </tr>
+        <tr>
+            <td>${false}</td>
+            <td>${true}</td>
+            <td>${false&&true}</td>
+        </tr>
+        <tr>
+            <td>${true}</td>
+            <td>${true}</td>
+            <td>${true&&true}</td>
+        </tr>
+    </table>`
+    document.write(list1)
+    document.write("<h1>|| or</h1>")
+        const list2 = `<body>
+    <table>
+        <tr>
+            <td>좌변</td>
+            <td>우변</td> 
+            <td>결과</td>
+        </tr>
+        <tr>
+            <td>${false}</td>
+            <td>${false}</td>
+            <td>${false||false}</td>
+        </tr>
+        <tr>
+            <td>${true}</td>
+            <td>${false}</td>
+            <td>${true||false}</td>
+        </tr>
+        <tr>
+            <td>${false}</td>
+            <td>${true}</td>
+            <td>${false||true}</td>
+        </tr>
+        <tr>
+            <td>${true}</td>
+            <td>${true}</td>
+            <td>${true||true}</td>
+        </tr>
+    </table>`
+    document.write(list2)
+    </script>
+</head>
+<!-- <body>
+    <table>
+        <tr>
+            <td>좌변</td>
+            <td>우변</td>
+            <td>결과</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+</body>
+</html>

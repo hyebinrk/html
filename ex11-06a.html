@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+        table{
+            border-collapse: collapse;
+            font-family: 'seoyoon';
+            src: url('./fonts/이서윤체.ttf') format('truetype');
+        }
+        tr,td {
+            border: 3px solid rgb(213, 213, 248);
+            background-color:rgb(146, 146, 226);
+            color:white;
+            padding: 15px;
+        }
+        tr:first-child td:nth-child(2){
+            background-color:rgb(243, 227, 239);
+            color:rgb(114, 74, 111);
+        }
+        td:nth-child(2){
+            background-color:rgb(233, 233, 245);
+            color:blueviolet;
+        }
+    </style>
+    <script>
+        const inp = prompt("원하는 값을 입력하세요.");
+        document.write("<h1>구구단 " + inp + "단</h1>");
+        const list = `<table>
+        <tr>
+        <td>*</td>
+        <td>${inp}</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>${inp * 1}</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>${inp * 2}</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>${inp * 3}</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>${inp * 4}</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>${inp * 5}</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>${inp * 6}</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>${inp * 7}</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>${inp * 8}</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>${inp * 9}</td>
+        </tr>
+        </table>`;
+        document.write(list);
+    </script>
+</head>
+<body>
+</body>
+</html>
