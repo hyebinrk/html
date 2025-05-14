@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <style>
+        div {
+            text-align: center;
+            margin-top: 50%;
+            color: rgb(228, 107, 107);
+        }
+        .win {
+            text-align: center;
+            margin-top: 50%;
+            color: rgb(130, 130, 230);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const now = dayjs();
+        const random = now.get("ms") % 3;
+        console.log(random);
+        if (random == 0) {
+        document.body.innerHTML = `<div class=""><h1>당신은 죽었다</h1></div>`;
+      } else {
+        document.body.innerHTML = `<div class="win"><h1>당신은 살았다</h1></div>`;
+      }
+    </script>
+</body>
+</html>

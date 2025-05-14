@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: rgb(253, 204, 70);
+            color: rgb(253, 252, 252);
+            margin: 1px;
+        }
+        li::marker{
+            color:rgb(247, 69, 69)
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let list = '<ol>';
+        for(let i=0; i<10; i++){
+            list += `<li> 애햄비타민💛</li>`;
+        }
+        list += "</ol>"
+
+        document.body.innerHTML = list;
+    </script>
+</body>
+</html>

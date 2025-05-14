@@ -7,6 +7,10 @@
 </head>
 <body>
     <style>
+        table{
+            border-collapse: collapse;
+            width: 75%;
+        }
         tr,td{
             border: 1px solid black;
             padding: 8px;
@@ -27,8 +31,16 @@
         .temperature :nth-child(n+18):nth-child(-n+23){
             background-color: rgb(241, 126, 126);
         }
-        script{
-            color: blueviolet;
+        #result{
+            color:rgb(231, 89, 144);
+            animation: tem 4s infinite;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        @keyframes tem{
+            0%{color:rgb(240, 123, 123)}
+            50%{color:rgb(243, 243, 154)}
+            100%{color:rgb(182, 125, 235)}
         }
     </style>
     
@@ -75,23 +87,26 @@
         <td colspan="6">정상온도를 넘겼습니다.</td>
     </tr>
 </table>
+<p id="result"></p>
 <script>
         // const inp = prompt("현재 온도를 입력하세요.")
         const inp = 25
         if(inp < 16){
-            document.write('지금 온도는 '+inp+' 이며, 정상온도 이하로 벗어났습니다.')        
+            message = '지금 온도는 '+inp+' 이며, 정상온도 이하로 벗어났습니다.';
         }
         else if(16 <= inp && inp < 22){
-            document.write('지금 온도는 '+inp+' 이며, 선선합니다.')
+            message = '지금 온도는 '+inp+' 이며, 선선합니다.';
         }
         else if(22 <= inp && inp < 28){
-            document.write('지금 온도는 '+inp+' 이며, 보통입니다.')
+            message = '지금 온도는 '+inp+' 이며, 보통입니다.';
         }
         else if(28 <= inp && inp < 32){
-            document.write('지금 온도는 '+inp+' 이며, 조금 갑갑한 상태입니다.')
+            message = '지금 온도는 '+inp+' 이며, 조금 갑갑한 상태입니다.';
         }
         else{
-            document.write('지금 온도는 '+inp+' 이며, 정상 온도를 넘겼습니다.')
+            message = '지금 온도는 '+inp+' 이며, 정상 온도를 넘겼습니다.';
         }
+
+        document.getElementById('result').textContent = message;
 </script>
 </html>

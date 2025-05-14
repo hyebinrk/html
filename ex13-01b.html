@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <style>
+      div {
+        padding: 0;
+        margin: 20% auto;
+        background: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAxMjRfMjM1%2FMDAxNjQyOTgzNzU1MDU4.9TbTLY39tCgoZghV77nEWrMEwdPxOODTQgX_2m7HK3cg.Mi6RwwhYLb5Pm92BqpDJedUMGTR8KrIK86bJI62S8JMg.JPEG.smileandhappy123%2Foutput_518205523.jpg&type=sc960_832");
+        background-position: 30px 80px;
+        width: 300px;
+        height: 280px;
+      }
+      .zzi {
+        background-position: 0px 0;
+        width: 300px;
+        height: 280px;
+      }
+      .muk {
+        background-position: -385px 0;
+        width: 220px;
+        height: 320px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      const now = dayjs();
+      const random = now.get("ms") % 3;
+      console.log(random);
+
+      if (random == 0) {
+        document.body.innerHTML = `<div class=""></div>`;
+      } else if (random == 1) {
+        document.body.innerHTML = `<div class=""></div>`;
+      } else {
+        document.body.innerHTML = `<div class=""></div>`;
+      }
+    </script>
+  </body>
+</html>
