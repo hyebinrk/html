@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <style>
+        body{
+            background-color: rgba(64, 119, 71, 0.664);
+            height: 100vh;            
+        }
+        .container{
+            position: relative;
+            top: 30%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* flex-dirextion으로 주축을 바꿨기 때문에 justify로 조정해줘야함 -> 
+                                    그리고 입력값없음에 대한게 바꼈기 때문에 요소들은 center로 넣으려면 다시 살려줌 */
+            height: 35vh;
+            border-radius: 20px;
+            width: 70%;;
+            gap: 25px;
+            background-color: white;
+        }
+        .container div {
+            width: 100%;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="form-floating mb-3">
+    <input
+    type="number"
+    class="form-control"
+    id="floatingInput"
+    min="0"
+    max="100"
+    placeholder="값">
+    <label for="floatingInput">데이터 값 입력</label>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button id="btnSucc" type="button" class="btn btn-success" onclick="fnInp()">전송</button>
+        <button type="button" class="btn btn-warning" onclick="fnRst()">취소</button>
+    </div>
+
+    <!-- 스피너 -->
+    <button id="btnLoad" class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+    <span role="status">Loading...</span>
+    </button>
+
+    <div
+      class="progress"
+      role="progressbar"
+      aria-label="Info example"
+      aria-valuenow="50"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      <div id="prog"
+      class="progress-bar text-bg-info"
+      style="width: 50%">
+      50%
+      </div>
+    </div>
+
+    <h2 id="disp">입력값없음</h2>
+    </div>
+
+    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ratione facere sapiente beatae velit dolores maxime fugit commodi odio repellat, delectus praesentium et dolor ab, possimus eos voluptatibus, quae iste corporis tempora repellendus nobis. Est commodi temporibus explicabo impedit, veritatis blanditiis consequatur accusamus cumque cupiditate distinctio ipsam quia deserunt. Molestiae, aut hic magni libero sunt distinctio maiores architecto. Aut, excepturi et! Alias velit vitae nihil amet laudantium. Nam quos, in laborum, voluptatibus impedit ab, aspernatur quisquam vitae repellat consequatur omnis. Eos inventore odio consequatur unde culpa voluptatibus nemo, ipsam in architecto cumque, eaque reiciendis similique minus, itaque reprehenderit qui sint fuga quo veritatis repellendus blanditiis laboriosam? Corrupti vero doloremque repudiandae tempora non excepturi ratione incidunt fuga voluptates a? Dolorem eaque labore iure fugiat deleniti qui dolore placeat voluptatibus, enim, eveniet odio sint distinctio ipsum cumque tenetur dolor ex laborum nostrum odit iste! Voluptatibus unde blanditiis impedit odit quaerat temporibus nihil accusantium harum debitis iusto dolore ipsam non voluptatem accusamus necessitatibus possimus repellendus, id nesciunt natus exercitationem minus! Veniam officiis sequi accusantium ut consequuntur, animi numquam et nisi est, illum incidunt provident eius autem alias? Tempore facere velit placeat ad exercitationem, dolores vero dolor assumenda quasi, nam nisi quas, repellendus quaerat?</h3>
+
+    <script>
+      const inp = document.querySelector("#floatingInput");
+      const disp = document.querySelector("#disp");
+      const prog = document.querySelector("#prog");
+
+      const fnLoaded = () => {
+        prog.classList.add("text-bg-info");
+        prog.classList.remove("text-bg-warning");
+        prog.classList.remove("progress-bar-striped");
+      }; // 호이스팅때문에 함수를 먼저 해야함. 그래야 fnInp안에서 얘를 호출해서 쓸 수 있음.
+
+      const fnInp = () => {
+        disp.textContent = `${inp.value}%`;
+        prog.textContent = `${inp.value}%`;
+        // console.log(prog.style.width);
+        prog.style.width = `${inp.value}%`;
+
+        /* 로딩상태 */
+        prog.classList.remove("text-bg-info");
+        prog.classList.add("text-bg-warning");
+        prog.classList.add("progress-bar-striped");
+
+        /* 지연시간을 잠깐 주고 함수를 호출함 */
+        setTimeout(()=> fnLoaded(), 500); // 호이스팅때문에 해당 함수를 먼저 만들어야 호출할 수 있음.
+      };
+      const fnRst = () => {
+        disp.textContent = "입력값없음";
+        prog.style.width = `0%`;
+        prog.textContent = `0%`;
+        inp.value = "";
+      };
+    </script>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
