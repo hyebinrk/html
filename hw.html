@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            background-color:rgb(229, 223, 253);
+            border-radius: 50%;
+        }
+        .hour
+    </style>
+</head>
+<body>
+    <script>
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        document.write(`현재 시간 : ${hours}시 ${minutes}분 ${seconds}초`);
+    </script>
+    <div class="clock">
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+    </div>
+</body>
+</html>
