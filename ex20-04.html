@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(236, 222, 236);
+        }
+        img{
+            margin: 0;
+            background-color: rgb(197, 136, 202);
+            color: white;
+            border-radius: 50%;
+            font-size: 3rem;
+            position: absolute;
+            padding: 20px 30px 30px;
+            transform: translate(400px, 400px);
+            user-select: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const star = document.createElement("img");
+            star.src = "https://i.pinimg.com/736x/7f/20/cf/7f20cf717a28e9e69a1674eb660c0a98.jpg"
+            star.style.position = "absolute";
+            star.style.width = "100px"
+            star.style.heigth= "100px";
+            // star.innerHTML = `이미지`;
+            document.body.appendChild(star);
+
+            let x = (y = 0);
+            const step = 40;
+
+
+            const move = (event) => {
+                star.style.left = `${x * step}px`;
+                star.style.top = `${y * step}px`;
+            };
+            
+            window.addEventListener("keydown", (event)=>{
+                if(event.key=="ArrowLeft") x-=1;
+                if(event.key=="ArrowRight") x+=1;
+                if(event.key=="ArrowUp") y-=1;
+                if(event.key=="ArrowDown") y+=1;
+                console.log(event.key);
+
+                move();
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

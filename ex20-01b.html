@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const pet={
+            name: '구름',
+            eat: function(food){
+                document.write(`${this.name}은 ${food}을 먹습니다.`) 
+                // 중괄호 내부에 있기 때문에 pet.name이나 this.name을 써도 된다.
+                // 호출하는 위치에 따라 this가 가지고 있는게 다르기때문에 조심해서 써야함.
+            },
+        };
+        pet.eat("밥");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

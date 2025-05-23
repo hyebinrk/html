@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 들의 속도를 테스트</title>
+    <script>
+        const oriTime = 10*1000*1000
+        const arr = Array(oriTime).fill(0).map((v,i) => i);
+        
+        console.time("for - 10,000,000"); // 태그
+        for (let i = 0; i < oriTime; i++) {}
+        console.timeEnd("for - 10,000,000"); // 이 사이에 벌어진 일을 시간으로 나타냄. 시작할때와 같은 태그를 달아줘야 함
+        console.time("for - arr.length"); // 태그
+        for (let i = 0; i < arr.length; i++); {}
+        console.timeEnd("for - arr.length"); // 시작과 같은태그
+        console.time("(var)for - arr.length"); // 태그
+        for (var i = 0; i < arr.length; i++) {}
+        console.timeEnd("(var)for - arr.length"); // 시작과 같은태그
+        /* 시간계산을 해서 콘솔에 찍어보면 최신문법인 let이 더 빠른것을 알 수 있다 */
+
+        console.time("(reverse) for - arr.length"); // 태그
+        const cnt = arr.length
+        for (let i = cnt; i > 0; i--) {}
+        console.timeEnd("(reverse) for - arr.length"); // 시작과 같은태그
+
+        console.time("forEach : function"); // 태그
+        arr.forEach(function(v,i){});
+        console.timeEnd("forEach : function"); // 시작과 같은태그
+        /* 연산 속도가 오래 걸림 */
+
+        console.time("forEach : =>"); // 태그
+        arr.forEach((v,i)=>{});
+        console.timeEnd("forEach : =>"); // 시작과 같은태그
+        /* function과 =>는 속도가 비슷함 */
+
+        console.time("for - of"); // 태그
+        for(const v of arr) {}
+        console.timeEnd("for - of"); // 시작과 같은태그
+        /* forEach보다 오래걸림 */
+
+        console.time("for - in"); // 태그
+        for(const v in arr) {}
+        console.timeEnd("for - in"); // 시작과 같은태그
+        /* 엄 청 오 래 걸 림 ㅇㅁㅇ.. */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
