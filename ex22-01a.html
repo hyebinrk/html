@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = [4, 5, 6, 7, 81, 13, 16, 18, 45, 2, 3];
+        const str = ['banana', 'apple', 'kiwi', 'melon', 'cherry'];
+        console.log(1, arr);
+        str.sort();
+        arr.sort((a,b) => a - b);
+        console.log(2, arr);
+        console.log(3, str);
+        str.sort();
+        console.log(4, str);
+        /* 객체 정렬 */
+            const user = [
+            {name:'홍길동',age:27},
+            {name:'슈퍼맨',age:14},
+            {name:'배트맨',age:35},
+        ];
+        user.sort((a,b)=>a.age-b.age); //a부터 b까지라는 뜻. 으로 오름차순정렬된다.
+        console.log(user);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 390vh;
+        }
+        section {
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color:rgb(60, 138, 93);
+            background-color: rgba(226, 240, 227, 0.582);
+        }
+        section:nth-of-type(even) {
+            background-color: rgba(171, 184, 172, 0.582);
+            color:rgba(92, 100, 93, 0.938) ;
+        }
+        .scroll-text {
+            position: fixed;
+            top: 250px;
+            left: 42%;
+            transform: translateX(-50px);
+            font-size: 1.4rem;
+            font-weight: bold;
+            box-shadow: 10px 10px 30px rgba(81, 126, 90, 0.336);
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .left-menu{
+            width:150px ;
+            height:250px ;
+            background-color: rgb(245, 244, 190);
+            color:rgb(211, 165, 79);
+            padding: 20px;
+            position: fixed;
+            top:100px;
+            border-radius: 10px;
+            /* 아래 두개는 없앴다가 생기게 할 수 있는 애*/
+            left: -200px; 
+            opacity: 0; 
+            transition: 0.5s ease;
+        }
+        .show-left{
+            left: 10px;
+            opacity: 1;
+        }
+        .right-menu{
+            width: 250px;
+            height: 150px;
+            background-color: rgba(230, 214, 228, 0.815);
+            color:rgb(85, 45, 30);
+            padding: 20px;
+            position: fixed;
+            top: 100px;
+            border-radius: 10px;
+            right: -200px;
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+        .show-right{
+            right: 10px;
+            opacity: 1;
+        }
+        .end-line {
+            display: flex;
+            justify-content: center;
+        }
+        .end-menu{
+            position: fixed;
+            font-size: 2rem;
+            top: 90%;
+            color: white;
+            background-color: rgba(230, 153, 153, 0.795);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            height: 50px;
+            width: 22%;
+            transition: 0.5 ease;
+            opacity: 0;
+        }
+        .show-end {
+            top: 90%;
+            opacity: 1;
+            width: 100%;
+        }
+        </style>
+</head>
+<body>
+    <!-- div.scroll-text#scrollText{처음이에요. 스크롤을 내려보세요.} -->
+    <div class="scroll-text" id="scrollText">🍀🍏💚🫧⭐🐈‍⬛🍀</div>
+    <!-- div.left-menu#leftMenu{왼쪽메뉴} -->
+    <div class="left-menu" id="leftMenu">왼쪽메뉴</div>
+    <!-- div.left-menu#leftMenu{오른쪽메뉴} -->
+    <div class="right-menu" id="rightMenu">오른쪽메뉴</div>
+    <!-- div.end-line>div.class.end-menu#endMenu{감사합니다!} -->
+    <div class="end-line">
+        <div class="end-menu" id="endMenu">감사합니다!</div>
+    </div>
+
+    
+    <!-- section{$단계}*5 -->
+    <section>1단계</section>
+    <section>2단계</section>
+    <section>3단계</section>
+    <section>4단계</section>
+    <section>End</section>
+
+    <script>
+        const scrollText = document.getElementById("scrollText");
+        const leftMenu = document.getElementById("leftMenu");
+        const rightMenu = document.getElementById("rightMenu");
+        const endMenu = document.getElementById("endMenu");
+       
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            console.log(scrollY);
+        
+            // 스크롤 위치에 따른 텍스트를 변경
+            if(scrollY < 700){
+                scrollText.textContent = `아래로 스크롤을 내려보세요!/${scrollY}`;            
+            } else if(scrollY < 1500){
+                scrollText.textContent = `지금은 2단계입니다/${scrollY}`;            
+            } else if(scrollY < 2350){
+                scrollText.textContent = `지금은 3단계입니다/${scrollY}`;            
+            } else if(scrollY < 3200){
+                scrollText.textContent = `지금은 4단계입니다/${scrollY}`;            
+            } else if(scrollY < 4100){
+                scrollText.textContent = `지금은 마지막입니다/${scrollY}`;            
+            }
+
+            if(scrollY > 700 && scrollY < 1350){
+                leftMenu.classList.add("show-left");
+            } else {
+                leftMenu.classList.remove("show-left");
+            }
+
+            if(scrollY > 1500 && scrollY < 2300){
+                rightMenu.classList.add("show-right");
+            } else {
+                rightMenu.classList.remove("show-right");
+            }
+            if (schrollY > 3500) {
+                endMenu.classList.add("show-end");
+            } else {
+                endMenu.classList.remove("show-end");
+            }
+    });
+    </script>
+</body>
+</html>

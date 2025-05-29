@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="c1 a1">Hello World</div>
+    <div class="c1 a1" id="test1">Lorem, ipsum.</div>
+    <div class="c1 a2" id="test2">document 선택</div>
+
+    <script>
+        const ex1_id = document.querySelector("#test1");
+        const ex2_id = document.getElementById("test1"); // ⭐
+        // 이건 id가져온다는걸 명시해줬기 때문에 앞에 #을 붙이지 않아도 됨
+
+        const ex1_class = document.querySelector(".c1.a2");
+        const ex1_classAll = document.querySelectorAll(".c1");
+        const ex2_classAll = document.getElementsByClassName("c1");
+        // 여긴 element뒤에 s 붙어있다는걸 주의!!! 이건 c1이라는 이름을 가진 모든 클래스
+        // all과 유사한 기능인것임.
+
+        const ex1_tag = document.querySelector("div");
+        const ex2_tag = document.getElementsByTagName("div");
+        
+        console.log("=====querySelector=====");
+        console.log(1, ex1_id);
+        console.log(1, ex1_class);
+        console.log(1, ex1_tag);
+        console.log(1, ex1_classAll);
+        ex1_classAll.forEach((v) => console.log('forEach:',v));
+        console.log("=====getElement=====")
+        console.log(2, ex2_id);
+        console.log(2, ex2_classAll);        
+        console.log(2, ex2_tag);
+        for(let i=0; i<length; i++){
+            console.log("유사배열 for:", ex2_classAll[i]);
+        }
+    </script>
+</body>
+</html>

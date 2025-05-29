@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        img{
+            margin: 0;
+            color: white;
+            border-radius: 50%;
+            font-size: 3rem;
+            position: absolute;
+            padding: 20px 30px 30px;
+            /* transform: translate(400px, 400px); */
+            user-select: none;
+            width:100px;
+        }
+    </style>
+    <script>
+                        // 딸기
+        let statusStb = true
+        document.addEventListener("DOMContentLoaded", () => {
+            const stb = document.createElement("img");
+
+            setInterval(()=>{
+                if (statusStb) {
+                    stb.src = "./img/strawberry.jpg";
+                } else{
+                    stb.src = "";
+                }
+                statusStb = !statusStb;
+            },10000)           
+
+            document.body.appendChild(stb);
+
+            let ran;
+            setInterval(()=>{ranstb = Math.floor(Math.random() * 20)
+                let x = (y = ranstb);
+            const step = 40;
+
+            const moveStb = (event) => {
+                stb.style.left = `${x * step}px`;
+                stb.style.top = `${y * step}px`;
+            };
+            moveStb(); // 최초로딩
+            
+            },10000);
+            
+            
+        });
+        let status = true
+        document.addEventListener("DOMContentLoaded", () => {
+            const pac = document.createElement("img");
+
+            setInterval(()=>{
+                if (status) {
+                    pac.src = "./img/pacman1.png";
+                } else{
+                    pac.src = "./img/pacman2.png";
+                }
+                status = !status;
+            },200)           
+
+            document.body.appendChild(pac);
+
+            let x = (y = 10);
+            const step = 40;
+
+            const move = (event) => {
+                pac.style.left = `${x * step}px`;
+                pac.style.top = `${y * step}px`;
+            };
+            move(); // 최초로딩
+
+            window.addEventListener("keydown", (event)=>{
+                if(event.key=="ArrowLeft") {
+                    x-=1;
+                    pac.style.transform = "scaleX(-1)";
+                }
+                // scale(1.5) 하면 1.5배로 만들어주는 것
+                // scaleX(1.5) 하면 가로로 1.5배가 되는 것
+                // scaleX(-1) 하면 왼쪽으로 뒤집어짐(반대로)
+                // scaleX(1)하면 오른쪽으로 뒤집어짐(원래대로)
+                if(event.key=="ArrowRight") {
+                    x+=1;
+                    pac.style.transform = "scaleX(1)";
+                }
+                if(event.key=="ArrowUp") {
+                    y-=1;
+                    pac.style.transform = "rotate(270deg)";
+                }
+                if(event.key=="ArrowDown") {
+                    y+=1;
+                    pac.style.transform = "rotate(90deg)";
+                }
+                console.log(event.key);
+
+                move();
+            });
+        });
+    
+
+    </script>
+</head>
+<body>
+</body>
+</html>
